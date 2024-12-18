@@ -4,7 +4,6 @@ public class Concert extends MultiShowPricing{
 	private double eventHandleSurchargeInPercent;
 
 	public Concert(String showTitle, String showType, String ticketType, int ticketPriceInRs, int ticketQuantity, int eventHandleSurchargeInPercent) {		
-		
 		super(showTitle, showType, ticketType, ticketPriceInRs, ticketQuantity);
 		this.eventHandleSurchargeInPercent=eventHandleSurchargeInPercent;
 		super.singleTicketPrice=calculateSingleTicketPrice();
