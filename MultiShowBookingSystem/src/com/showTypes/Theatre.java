@@ -1,4 +1,6 @@
-package com.showPricing;
+package com.showTypes;
+
+import com.showPricing.MultiShowPricingCalculator;
 
 public class Theatre extends MultiShowPricingCalculator {
 	private boolean isSeniorCitizen;
