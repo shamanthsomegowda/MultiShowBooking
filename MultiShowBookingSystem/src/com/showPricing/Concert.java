@@ -1,6 +1,6 @@
 package com.showPricing;
 
-public class Concert extends MultiShowPricing{
+public class Concert extends MultiShowPricingCalculator{
 	private double eventHandleSurchargeInPercent;
 
 	public Concert(String showTitle, String showType, String ticketType, int ticketPriceInRs, int ticketQuantity, int eventHandleSurchargeInPercent) {		
@@ -9,6 +9,7 @@ public class Concert extends MultiShowPricing{
 		super.singleTicketPrice=calculateSingleTicketPrice();
 	}
 
+	/** returns the cost of single ticket after including the applicable surcharge and discounts */
 	@Override
 	public double calculateSingleTicketPrice(){
 		singleTicketPrice = ticketPriceInRs + ticketPriceInRs*(eventHandleSurchargeInPercent/100);

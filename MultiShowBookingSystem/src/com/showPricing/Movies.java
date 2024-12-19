@@ -1,6 +1,6 @@
 package com.showPricing;
 
-public class Movies extends MultiShowPricing{
+public class Movies extends MultiShowPricingCalculator{
 	private boolean isStudent;
 	private double studentDiscountInPercent;
 	private double bulkDiscountInPercent;
@@ -14,6 +14,7 @@ public class Movies extends MultiShowPricing{
 		super.singleTicketPrice=calculateSingleTicketPrice();
 	}
 
+	/** returns the cost of single ticket after including the applicable surcharge and discounts */
 	@Override
 	public double calculateSingleTicketPrice(){
 		if(isStudent) {

@@ -1,6 +1,6 @@
 package com.showPricing;
 
-public class Theatre extends MultiShowPricing {
+public class Theatre extends MultiShowPricingCalculator {
 	private boolean isSeniorCitizen;
 	private double seniorCitizenDiscountInPercent;
 	private int premiumSurcharge;
@@ -14,6 +14,7 @@ public class Theatre extends MultiShowPricing {
 		super.singleTicketPrice=calculateSingleTicketPrice();
 	}
 
+	/** returns the cost of single ticket after including the applicable surcharge and discounts */
 	@Override
 	public double calculateSingleTicketPrice(){
 		if(isSeniorCitizen) {
